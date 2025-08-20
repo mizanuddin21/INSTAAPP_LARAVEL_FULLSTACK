@@ -6,7 +6,7 @@ This project is a copy cat of an Instagram app with cheap and limited feature. U
 # Prerequisites
 Before running the project, ensure you have the following installed:
 
-1. laravel 4.5.1.
+1. Laravel 4.5.1.
 
 2. PHP (v7.4.33)
 
