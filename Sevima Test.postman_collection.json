@@ -1,0 +1,1461 @@
+{
+	"info": {
+		"_postman_id": "2644cb64-6a37-4c7b-946e-57f0c87b0ac7",
+		"name": "Sevima Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29799384"
+	},
+	"item": [
+		{
+			"name": "User register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Miza\",\r\n    \"email\": \"miza_mage@test.com\",\r\n    \"password\": \"T2sT123\",\r\n    \"password_confirmation\": \"T2sT123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Miza\",\r\n    \"email\": \"miza_mage@test.com\",\r\n    \"password\": \"T2sT123\",\r\n    \"password_confirmation\": \"T2sT123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:24:22 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:24:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"name\": \"Miza\",\n        \"email\": \"miza_mage@test.com\",\n        \"updated_at\": \"2025-08-20T03:24:22.000000Z\",\n        \"created_at\": \"2025-08-20T03:24:22.000000Z\",\n        \"id\": 2\n    },\n    \"token\": \"2|OHR3qNDjhAuWffJlkvzE8zVVsHVDYyO5xt2NaFoR\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"miza_mage@test.com\",\r\n    \"password\": \"T2sT123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User gagal login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"miza_mage@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:26:53 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:26:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Invalid credentials, username / password salah\"\n}"
+				},
+				{
+					"name": "User sukses login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"miza_mage@test.com\",\r\n    \"password\": \"T2sT123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:27:37 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:27:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"Miza\",\n        \"email\": \"miza_mage@test.com\",\n        \"created_at\": \"2025-08-20T03:24:22.000000Z\",\n        \"updated_at\": \"2025-08-20T03:24:22.000000Z\"\n    },\n    \"token\": \"3|rOqXG3jUEZ5iU27wFn2IpZfZG0mZBHNHTXIY16gG\"\n}"
+				},
+				{
+					"name": "User login sukses",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"miza_mage@test.com\",\r\n    \"password\": \"T2sT123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:58:19 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:58:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Login berhasil berhasil\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"Miza\",\n            \"email\": \"miza_mage@test.com\",\n            \"created_at\": \"2025-08-20T03:24:22.000000Z\",\n            \"updated_at\": \"2025-08-20T03:24:22.000000Z\"\n        },\n        \"token\": \"6|4KI9pxpp9xYo5XVbRszMc9tMbLKhVmuZGl11Oe0D\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|rOqXG3jUEZ5iU27wFn2IpZfZG0mZBHNHTXIY16gG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User berhasil logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:29:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:29:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Logged out\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Content post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|WfUBtIbYik02jtprEfUYP6YU9quq8pjU8DWrmjtx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "caption",
+							"value": "testGambar8",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/mizan/Downloads/cartethyia.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Content berhasil post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "caption",
+									"value": "test gambar",
+									"type": "text"
+								},
+								{
+									"key": "image ",
+									"type": "file",
+									"src": "/C:/Users/mizan/Downloads/Cartethyia Splash.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:37:06 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:37:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"caption\": \"test gambar\",\n    \"image\": null,\n    \"user_id\": 2,\n    \"updated_at\": \"2025-08-20T03:37:06.000000Z\",\n    \"created_at\": \"2025-08-20T03:37:06.000000Z\",\n    \"id\": 1\n}"
+				},
+				{
+					"name": "Content berhasil post gambar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "caption",
+									"value": "testGambar7",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/mizan/Downloads/cartethyia.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:15:16 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:15:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"caption\": \"testGambar7\",\n    \"image\": \"images/6aeJCOVlxAgvzIZQhzNOj2dyquwvKnRhPBuPLcKQ.jpg\",\n    \"user_id\": 2,\n    \"updated_at\": \"2025-08-20T04:15:16.000000Z\",\n    \"created_at\": \"2025-08-20T04:15:16.000000Z\",\n    \"id\": 11\n}"
+				}
+			]
+		},
+		{
+			"name": "Content get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|WfUBtIbYik02jtprEfUYP6YU9quq8pjU8DWrmjtx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Content berhasil get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:38:40 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 03:38:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 2,\n        \"caption\": \"test gambar\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T03:37:06.000000Z\",\n        \"updated_at\": \"2025-08-20T03:37:06.000000Z\"\n    }\n]"
+				},
+				{
+					"name": "Content berhasil get all data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:17:37 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:17:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 2,\n        \"caption\": \"test gambar\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T03:37:06.000000Z\",\n        \"updated_at\": \"2025-08-20T03:37:06.000000Z\",\n        \"image_url\": null\n    },\n    {\n        \"id\": 2,\n        \"user_id\": 2,\n        \"caption\": \"test gambar 2\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T03:40:47.000000Z\",\n        \"updated_at\": \"2025-08-20T03:40:47.000000Z\",\n        \"image_url\": null\n    },\n    {\n        \"id\": 3,\n        \"user_id\": 2,\n        \"caption\": \"test gambar 3\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T03:42:07.000000Z\",\n        \"updated_at\": \"2025-08-20T03:42:07.000000Z\",\n        \"image_url\": null\n    },\n    {\n        \"id\": 4,\n        \"user_id\": 2,\n        \"caption\": \"test gambar 3\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T03:46:08.000000Z\",\n        \"updated_at\": \"2025-08-20T03:46:08.000000Z\",\n        \"image_url\": null\n    },\n    {\n        \"id\": 5,\n        \"user_id\": 2,\n        \"caption\": \"test gambar 3\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T03:46:41.000000Z\",\n        \"updated_at\": \"2025-08-20T03:46:41.000000Z\",\n        \"image_url\": null\n    },\n    {\n        \"id\": 6,\n        \"user_id\": 2,\n        \"caption\": \"test gambar 4\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T03:48:29.000000Z\",\n        \"updated_at\": \"2025-08-20T03:48:29.000000Z\",\n        \"image_url\": null\n    },\n    {\n        \"id\": 7,\n        \"user_id\": 2,\n        \"caption\": \"test gambar 5\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T03:53:50.000000Z\",\n        \"updated_at\": \"2025-08-20T03:53:50.000000Z\",\n        \"image_url\": null\n    },\n    {\n        \"id\": 8,\n        \"user_id\": 2,\n        \"caption\": \"test gambar 6\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T04:11:58.000000Z\",\n        \"updated_at\": \"2025-08-20T04:11:58.000000Z\",\n        \"image_url\": null\n    },\n    {\n        \"id\": 9,\n        \"user_id\": 2,\n        \"caption\": \"test gambar 6\",\n        \"image\": null,\n        \"created_at\": \"2025-08-20T04:12:44.000000Z\",\n        \"updated_at\": \"2025-08-20T04:12:44.000000Z\",\n        \"image_url\": null\n    },\n    {\n        \"id\": 10,\n        \"user_id\": 2,\n        \"caption\": \"test gambar 6\",\n        \"image\": \"posts/hBkl6LmySh0CmPcqhRy94IwYRw8S1Lz6PqBTrQk4.jpg\",\n        \"created_at\": \"2025-08-20T04:14:20.000000Z\",\n        \"updated_at\": \"2025-08-20T04:14:20.000000Z\",\n        \"image_url\": \"http://127.0.0.1:8000/storage/posts/hBkl6LmySh0CmPcqhRy94IwYRw8S1Lz6PqBTrQk4.jpg\"\n    },\n    {\n        \"id\": 11,\n        \"user_id\": 2,\n        \"caption\": \"testGambar7\",\n        \"image\": \"images/6aeJCOVlxAgvzIZQhzNOj2dyquwvKnRhPBuPLcKQ.jpg\",\n        \"created_at\": \"2025-08-20T04:15:16.000000Z\",\n        \"updated_at\": \"2025-08-20T04:15:16.000000Z\",\n        \"image_url\": \"http://127.0.0.1:8000/storage/images/6aeJCOVlxAgvzIZQhzNOj2dyquwvKnRhPBuPLcKQ.jpg\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Content get by name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|WfUBtIbYik02jtprEfUYP6YU9quq8pjU8DWrmjtx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/name?value=images/6aeJCOVlxAgvzIZQhzNOj2dyquwvKnRhPBuPLcKQ.jpg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"name"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "images/6aeJCOVlxAgvzIZQhzNOj2dyquwvKnRhPBuPLcKQ.jpg"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Content get by name berhasil",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/name?value=images/6aeJCOVlxAgvzIZQhzNOj2dyquwvKnRhPBuPLcKQ.jpg",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"name"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "images/6aeJCOVlxAgvzIZQhzNOj2dyquwvKnRhPBuPLcKQ.jpg"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:26:00 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:26:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 11,\n    \"user_id\": 2,\n    \"caption\": \"testGambar7\",\n    \"image\": \"images/6aeJCOVlxAgvzIZQhzNOj2dyquwvKnRhPBuPLcKQ.jpg\",\n    \"created_at\": \"2025-08-20T04:15:16.000000Z\",\n    \"updated_at\": \"2025-08-20T04:15:16.000000Z\",\n    \"image_url\": \"http://127.0.0.1:8000/storage/images/6aeJCOVlxAgvzIZQhzNOj2dyquwvKnRhPBuPLcKQ.jpg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Like content",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|WfUBtIbYik02jtprEfUYP6YU9quq8pjU8DWrmjtx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/11/like",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"11",
+						"like"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Like content berhasil",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/11/like",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"11",
+								"like"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:38:25 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:38:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Liked\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Comment content",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|WfUBtIbYik02jtprEfUYP6YU9quq8pjU8DWrmjtx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\" : \"Image nya bagus 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/11/comment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"11",
+						"comment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Comment content berhasil",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\" : \"Image nya bagus\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/11/comment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"11",
+								"comment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:46:14 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:46:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 2,\n    \"content\": \"Image nya bagus\",\n    \"post_id\": 11,\n    \"updated_at\": \"2025-08-20T04:46:14.000000Z\",\n    \"created_at\": \"2025-08-20T04:46:14.000000Z\",\n    \"id\": 5\n}"
+				}
+			]
+		},
+		{
+			"name": "Comment content get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|WfUBtIbYik02jtprEfUYP6YU9quq8pjU8DWrmjtx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/11/comments",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"11",
+						"comments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Comment content get berhasil",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/11/comments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"11",
+								"comments"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:49:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:49:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 5,\n        \"user_id\": 2,\n        \"post_id\": 11,\n        \"content\": \"Image nya bagus\",\n        \"created_at\": \"2025-08-20T04:46:14.000000Z\",\n        \"updated_at\": \"2025-08-20T04:46:14.000000Z\",\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"Miza\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Like content get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|gzBfygwUncAm05zGiIa74E7bKFYimLmhR2HvJ8Bi",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/11/likes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"11",
+						"likes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Like content get berhasil",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/11/likes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"11",
+								"likes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:50:08 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Aug 2025 04:50:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.33"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 2,\n        \"post_id\": 11,\n        \"created_at\": \"2025-08-20T04:38:25.000000Z\",\n        \"updated_at\": \"2025-08-20T04:38:25.000000Z\",\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"Miza\"\n        }\n    }\n]"
+				}
+			]
+		}
+	]
+}
