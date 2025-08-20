@@ -1,0 +1,12 @@
+body {
+  background-color: #c8c7c7; /* black background */
+  color: #fff;            /* white text */
+}
+
+.post-image {
+    width: 100%;             /* Make it fill the container */
+    height: 300px;           /* Set desired fixed height */
+    object-fit: cover;       /* Crop to fill area */
+    object-position: center; /* Center the image focus */
+    border-radius: 4px;      /* Optional: rounded corners */
+}
