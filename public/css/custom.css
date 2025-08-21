@@ -10,3 +10,14 @@ body {
     object-position: center; /* Center the image focus */
     border-radius: 4px;      /* Optional: rounded corners */
 }
+.form-label {
+    color: #212529; /* Bootstrap's default text color */
+}
+.custom-heading-color {
+    color: #ff5733;
+}
+
+.username-text {
+    color: white;
+    font-weight: bold;
+}
